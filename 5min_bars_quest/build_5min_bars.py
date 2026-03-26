@@ -57,7 +57,9 @@ def build_5m_bars_from_1m(df_1m: pd.DataFrame) -> pd.DataFrame:
 
     return df5
     
-    FILE = "EURUSD_1MIN_2015_2025_ASK_BID_NO_COVID.csv"
+################################################################################
+
+FILE = "EURUSD_1MIN_2015_2025_ASK_BID_NO_COVID.csv"
 
 df = pd.read_csv(FILE)
 print("[1M] loaded rows:", len(df), "| cols:", df.shape[1])
@@ -81,7 +83,7 @@ print(d.describe())
 # Ensure typical is 5
 print("[5M] pct diff==5:", round(float((d == 5).mean() * 100.0), 2))
 
-import pandas as pd
+#########################################################
 
 # Ensure datetime
 df5["timestamp"] = pd.to_datetime(df5["timestamp"], utc=True, errors="raise")
