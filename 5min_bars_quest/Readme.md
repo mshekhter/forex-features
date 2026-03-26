@@ -23,13 +23,11 @@ Pre release build features that describe persistence, clustering, balance progre
 ### Family D
 Release transition features that describe the shift from organized build into directional movement.
 
-## Design Principles
+## SPOILER ALERT
 
-- Keep source market data unchanged
-- Build features into a separate research dataframe
-- Use only frozen upstream inputs for downstream families
-- Preserve causal, window based construction
-- Append new feature blocks in one pass for consistency
+A+B do provide really solid unsigned signals that survive causal replay!!! Figuring the direction is a whole different quest which I will not publically share.
+I tried to bake in the sign into the feature families - this turned out to be a phantom idea. What survived, quite surprisingly (if you poke long enough...) is that as it is , with signs ignored, the signals point to good long legs, not your scalping noise that fights the spread.
+
 
 ## Repository Purpose
 
@@ -37,4 +35,4 @@ This repository is intended for exploratory research, feature engineering, and m
 
 ## Status
 
-Work in progress. Additional feature families, validation steps, and research notebooks may be added over time.
+Work in progress. Additional feature families, validation steps, and research notebooks may be added over time. 
