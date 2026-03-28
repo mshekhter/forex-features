@@ -1,0 +1,132 @@
+# inspect reduced feature columns
+
+import pandas as pd
+
+
+all_cols = list(df_feat_reduced_D.columns)
+
+A_cols = [c for c in all_cols if c.startswith("famA_")]
+B_cols = [c for c in all_cols if c.startswith("famB_")]
+C_cols = [c for c in all_cols if c.startswith("famC_")]
+D_cols = [c for c in all_cols if c.startswith("famD_")]
+other_cols = [c for c in all_cols if not c.startswith(("famA_", "famB_", "famC_", "famD_"))]
+
+print("df_feat_reduced_D shape:", df_feat_reduced_D.shape)
+print()
+print("non-family cols:", len(other_cols))
+print("Family A cols  :", len(A_cols))
+print("Family B cols  :", len(B_cols))
+print("Family C cols  :", len(C_cols))
+print("Family D cols  :", len(D_cols))
+print()
+
+print("Family A retained:")
+for c in A_cols:
+    print(c)
+
+print("\nFamily B retained:")
+for c in B_cols:
+    print(c)
+
+print("\nFamily C retained:")
+for c in C_cols:
+    print(c)
+
+print("\nFamily D retained:")
+for c in D_cols:
+    print(c)
+
+print("\nAll reduced columns:")
+for c in all_cols:
+    print(c)
+	
+	
+df_feat_reduced_D shape: (230305, 46)
+
+non-family cols: 20
+Family A cols  : 8
+Family B cols  : 8
+Family C cols  : 6
+Family D cols  : 4
+
+Family A retained:
+famA_damage_flow_up_w6
+famA_net_support_balance_up_w6
+famA_support_efficiency_up_w6
+famA_damage_flow_dn_w6
+famA_net_support_balance_dn_w6
+famA_support_efficiency_dn_w6
+famA_support_efficiency_up_w12
+famA_support_efficiency_dn_w12
+
+Family B retained:
+famB_terminal_disp_up_w6
+famB_max_pullback_from_peak_up_w6
+famB_final_pullback_from_peak_up_w12
+famB_terminal_disp_dn_w6
+famB_max_pullback_from_peak_dn_w6
+famB_final_pullback_from_peak_dn_w12
+famB_slope_3_add_up_w12
+famB_slope_3_add_dn_w12
+
+Family C retained:
+famC_build_pre_release_efficiency_up_w6
+famC_build_anchor_separation_up_w12
+famC_build_progressive_balance_up_w24
+famC_build_pre_release_efficiency_dn_w6
+famC_build_anchor_separation_dn_w12
+famC_build_progressive_balance_dn_w24
+
+Family D retained:
+famD_release_containment_escape_up
+famD_release_local_takeover_balance_3_up
+famD_release_containment_escape_dn
+famD_release_local_takeover_balance_3_dn
+
+All reduced columns:
+timestamp
+open_bid
+high_bid
+low_bid
+close_bid
+volume_bid
+open_ask
+high_ask
+low_ask
+close_ask
+volume_ask
+i_1m_first
+i_1m_last
+n_1m
+spread_pips_close
+spread_ok
+m_open
+m_high
+m_low
+m_close
+famA_damage_flow_up_w6
+famA_net_support_balance_up_w6
+famA_support_efficiency_up_w6
+famA_damage_flow_dn_w6
+famA_net_support_balance_dn_w6
+famA_support_efficiency_dn_w6
+famA_support_efficiency_up_w12
+famA_support_efficiency_dn_w12
+famB_terminal_disp_up_w6
+famB_max_pullback_from_peak_up_w6
+famB_final_pullback_from_peak_up_w12
+famB_terminal_disp_dn_w6
+famB_max_pullback_from_peak_dn_w6
+famB_final_pullback_from_peak_dn_w12
+famB_slope_3_add_up_w12
+famB_slope_3_add_dn_w12
+famC_build_pre_release_efficiency_up_w6
+famC_build_anchor_separation_up_w12
+famC_build_progressive_balance_up_w24
+famC_build_pre_release_efficiency_dn_w6
+famC_build_anchor_separation_dn_w12
+famC_build_progressive_balance_dn_w24
+famD_release_containment_escape_up
+famD_release_local_takeover_balance_3_up
+famD_release_containment_escape_dn
+famD_release_local_takeover_balance_3_dn
